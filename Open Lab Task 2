@@ -1,0 +1,56 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int choice, num;
+	cout << "1) Finding the number is prime \n2) Finding Prime number in a range";
+	cout<<"\nYour choice: ";
+	cin >> choice;
+	switch (choice) {
+	case 1:
+		cout << "Enter the number:";
+		cin >> num;
+		if (num >= 1)
+		{
+		   			bool Prime = true;
+			for (int i = 2; i < num; i++) {
+				if (num % i == 0)
+				{
+					Prime = false;
+					break;
+				}
+			}
+			if (Prime)
+				cout << "Your Number is prime";
+			else
+				cout << "Your Number is not prime ";
+		}
+		else
+		{
+			cout<<"Number is not prime";
+		}
+		break;
+	case 2:
+		int first, last;
+		cout << "Enter first number of range: ";
+		cin >> first;
+		cout << "Enter last number of range: ";
+		cin >> last;
+		for (int z = first; z <= last; z++)
+		{
+			bool Prime = true;
+			for (int x = 2; x < z; x++)
+			{
+				if (z % x == 0) {
+					Prime = false;
+					break;
+				}
+			}
+				if (Prime)
+					cout << z << " ";
+		}
+
+	}
+		return 0;
+}
