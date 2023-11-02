@@ -1,0 +1,58 @@
+#include<iostream>
+#include<ctime>
+using namespace std;
+int main()
+{
+	int date_b, date_r, Fine, remaining, paid, choice;
+	int t_days;
+	t_days = date_r - date_b;
+	string get, book_name;
+	cout<<"Welcome to Bibliotheca Library"<<endl;
+	cout<<"Menu \n1) Issue book \n2) Return book \n3) Quit"<<endl;
+	cout<<"Enter Your choice= ";
+	cin>>choice;
+	if (choice == 1)
+	{
+		cout<<"Name of book: ";
+		cin>>book_name;
+		cout<<"\nToday date: ";
+		cin>>date_b;
+		cout<<"\nDate you want to return on: ";
+		cin>>date_r;
+		int t_days;
+	    t_days = date_r - date_b;
+		cout<<"total days of book with you will be: "<<t_days<<endl;
+		cout<<"\nThank you";
+	}
+	else if(choice == 2)
+	{
+		cout<<"Name of book: ";
+		cin>>book_name;
+		cout<<"\nBorrowed date: ";
+		cin>>date_b;
+		cout<<"\nToday date: ";
+		cin>>date_r;
+		int t_days;
+	    t_days = date_r - date_b;
+		cout<<"total days= "<<t_days;
+		if(t_days > 5)
+		{
+			Fine = 0+(t_days - 5);
+		cout<<"\nFine= "<<Fine<<"$"<<endl;
+		}
+		else
+		{
+			cout<<"Thank you";
+		}
+	}
+	else if (choice == 3)
+	{
+		cout<<"**Thank you for coming**";
+	}
+	else
+	{
+		cout<<"wrong input";
+	}
+	return 0;
+	
+} 
