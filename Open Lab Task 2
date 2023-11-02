@@ -11,7 +11,7 @@ int main()
 	case 1:
 		cout << "Enter the number:";
 		cin >> num;
-		if (num >= 1)
+		if (num >= 2)
 		{
 		   			bool Prime = true;
 			for (int i = 2; i < num; i++) {
