@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int date_b, date_r, Fine, remaining, paid;
+	int t_days;
+	t_days = date_r - date_b;
+	string get, book_name;
+	cout<<"Welcome to Bibliotheca Library"<<endl;
+	cout<<"Enter book name: ";
+	cin>>book_name;
+	cout<<"Do you want to get the book?";
+	cin>>get;
+	if (get == "YES" || get == "yes")
+	{
+		cout<<"book is available but you have to return it in 5 days"<<endl;
+		cout<<"Enter today date: ";
+		cin>>date_b;
+		cout<<"Enter the date you want to return: ";
+		cin>>date_r;
+			if(date_r > 5)
+			{
+				Fine = (t_days - 5) + 0 ;
+				cout<<"fine you will get: " <<Fine ;
+			}
+	}
+	else if (t_days < 6)
+	{
+		cout<<"you will get no fine";
+	}
+	else if (get == "NO" || get == "no")
+	{
+		cout<<"Thank you for visiting our library";
+	}
+	return 0;
+}
